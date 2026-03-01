@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- JDBC Configuration -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/mydatabase
+        </property>
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            2005@Kalyansai
+        </property>
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQL8Dialect
+        </property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Auto create / update tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity Mappings -->
+        <mapping class="UniversityManagementSystem.Department"/>
+        <mapping class="UniversityManagementSystem.Student"/>
+        <mapping class="UniversityManagementSystem.StudentID"/>
+        <mapping class="UniversityManagementSystem.Course"/>
+
+    </session-factory>
+</hibernate-configuration>
